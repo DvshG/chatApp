@@ -12,23 +12,8 @@ The **LLM Chatbot Application** is a full-stack chat application that leverages 
 ## 2. System Architecture Diagram
 
 Below is the high-level architecture of the system:
+![NoteGPT-Flowchart-1741781029170](https://github.com/user-attachments/assets/0f378e24-e899-45c1-af3e-8b781e4e7d3d)
 
-```
-flowchart TD
-    A[Client (Web/Mobile App)] -->|HTTP/WS| B(API Gateway)
-    B -->|REST/WebSocket| C[Chat Service]
-    C --> D[User Session Manager]
-    C --> E[Groq Integration Layer]
-    E --> F[Groq Chat API]
-    C --> G[Context Store & History (In-Memory / DB)]
-    F -->|Response| E
-    E -->|Formatted Response| C
-    G --> C
-    D -->|User Data| C
-    B --> H[Authentication Service]
-    H --> B
-    C --> I[Monitoring & Logging]
-```
 
 *Figure: High-Level System Architecture*
 
