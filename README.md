@@ -13,7 +13,7 @@ The **LLM Chatbot Application** is a full-stack chat application that leverages 
 
 Below is the high-level architecture of the system:
 
-```mermaid
+```
 flowchart TD
     A[Client (Web/Mobile App)] -->|HTTP/WS| B(API Gateway)
     B -->|REST/WebSocket| C[Chat Service]
